@@ -230,7 +230,6 @@ nav a:hover {
     margin-top: 100px;
     margin-bottom: 0;
     display: flex;
-    align-content: center;
     justify-content: center;
     gap: 15px;
 }
@@ -542,4 +541,5 @@ font-family: inter;
 .toast.show {
     opacity: 1;
     transform: translateY(0);
+
 }
