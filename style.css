@@ -203,8 +203,8 @@ nav a:hover {
 .proyectos {
     min-height: 100vh;
     overflow: hidden;
-    text-align: center;
 }
+
 .proyectos h2 {
     color: var(--blanco-medio-frio);
     position: absolute;
@@ -214,6 +214,7 @@ nav a:hover {
     font-family: 'Space Grotesk';
     font-size: 25px;
 }
+
 .proyectos h2::after {
     content: "";
     position: absolute;
@@ -223,17 +224,19 @@ nav a:hover {
     height: 3px;
     background: linear-gradient(to right, var(--verde), var(--lila));
 }
-.proyectos .container-proyectos {
-    display: flex;
-    justify-content: center;   /* centra las cards */
-    align-items: stretch;
-    gap: 30px;
-    flex-wrap: wrap;
 
-    width: 100%;
-    max-width: 1200px;
-    margin: 60px auto 0 auto;  /* 🔥 ESTO las centra */
+/* 🔥 Container más abajo (30px extra) */
+.proyectos .container-proyectos {
+    min-height: 480px;
+    width: 1172px;
+    margin: 130px auto 0 auto; /* centrado + más abajo */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 15px;
 }
+
+/* Card */
 #card {
     width: 320px;
     height: 345px;
@@ -244,33 +247,39 @@ nav a:hover {
     transition: transform 0.4s ease;
     margin-top: 40px;
 }
+
 #card:hover {
     transform: translateY(-8px);
     box-shadow: 0 25px 40px rgba(0,0,0,.35);
 }
+
 /* CONTENEDOR DE IMAGEN */
 .card-img-wrapper {
     width: 100%;
     height: 160px;
     overflow: hidden;
 }
+
 /* IMAGEN */
 .card-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;       /* llena todo el ancho */
-    object-position: center; /* centra el recorte */
+    object-fit: cover;
+    object-position: center;
 }
+
 /* CONTENIDO */
 .card-content {
     padding: 16px;
     color: #e5e7eb;
 }
+
 .card-content h3 {
     font-size: 18px;
     margin: 0 0 8px;
     font-family: 'Space Grotesk';
 }
+
 .card-content p {
     font-size: 14px;
     opacity: .8;
@@ -279,12 +288,14 @@ nav a:hover {
     color: #e6f0ff;
     font-family: 'Inter';
 }
+
 /* TECNOLOGÍAS */
 .tecnologias {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
+
 .tecnologias span {
     font-size: 12px;
     padding: 6px 10px;
@@ -293,25 +304,26 @@ nav a:hover {
     color: #e6f0ff;
     font-family: inter;
 }
+
+/* 🔥 BOTÓN CORREGIDO */
 .more {
-    display: inline-block;
+    display: block;
     background: #9a63da;
     border-radius: 20px;
-    position: relative;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px;
-    margin-bottom: -50px;
+    padding: 10px 20px;
+    margin: 50px auto 0 auto; /* separación y centrado */
     text-decoration: none;
     font-family: 'Inter';
     color: var(--gris-antracita-oscuro);
     box-shadow: 0 0 10px var(--lila);
     transition: 0.4s;
+    width: fit-content;
 }
+
 .more:hover {
     box-shadow: 0 0 20px var(--lila);
 }
+
 #card .view {
     text-decoration: none;
     color: #aaffe1;
@@ -325,7 +337,6 @@ nav a:hover {
     font-weight: 100;
     cursor: pointer;
 }
-
 
 
 
@@ -544,5 +555,6 @@ font-family: inter;
     transform: translateY(0);
 
 }
+
 
 
